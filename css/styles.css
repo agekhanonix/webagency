@@ -559,27 +559,18 @@ figure img {
 	position:			absolute;
 	top: 				50%;
 	right: 				10%;
-	z-index:			100;
+	z-index:			5;
 	transform: 			translateY(-50%);
 	-webkit-transform: 	translateY(-50%);
 	-moz-transform: 	translateY(-50%);
 	-o-transform: 		translateY(-50%);
-	/*padding: 			20px;*/
 	background-color:  	rgba(255,255,255,0.75);
 	width: 				320px;
 	text-align: 		left;
 	font-size: 			1.5rem;
-	box-shadow: 		2px 2px 2px 0px #b1b1b1;
-	-moz-box-shadow: 	2px 2px 2px 0px #b1b1b1;
-	-webkit-box-shadow: 2px 2px 2px 0px #b1b1b1;
-	-o-box-shadow: 		2px 2px 2px 0px #b1b1b1;
-	border-radius: 		10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-o-border-radius: 	10px;
 	color: 				#000000;
 	padding-left:		10px;
-  	padding-right:		10px;
+  	padding-right:		15px;
   	padding-top:		20px;
   	padding-bottom:		10px;
 }
@@ -597,14 +588,10 @@ figure img {
 	font-size: 			1.1rem;
 	font-weight: 		bold;
 }
-.feedback-input {
+/*.feedback-input {
 	color:				#3c3c3c;
 	font-weight: 		500;
 	font-size: 			1.2rem;
-	border-radius: 		5px 5px 5px 5px;
-	-moz-border-radius: 5px 5px 5px 5px;
-	-webkit-border-radius: 5px 5px 5px 5px;
-	-o-border-radius: 	5px 5px 5px 5px;
 	line-height: 		22px;
 	background-color: 	#fbfbfb;
 	padding: 			13px 13px 13px 54px;
@@ -615,8 +602,8 @@ figure img {
   	-moz-box-sizing: 	border-box;
   	-o-box-sizing: 		border-box;
 	border: 			2px solid #cccccc;
-}
-.feedback-input:focus{
+}*/
+/*.feedback-input:focus{
 	background: 		#fff;
 	box-shadow: 		0;
 	-moz-box-shadow: 	0;
@@ -630,7 +617,7 @@ figure img {
 .focused{
   color:				#30aed6;
   border:				#30aed6 solid 3px;
-}
+}*/
 .text textarea {
     width: 				100%;
     height: 			150px;
@@ -641,17 +628,17 @@ figure img {
 .email input,
 .subject input,
 .text textarea {
-	border-radius: 		2px 2px 2px 2px;
-	-moz-border-radius: 2px 2px 2px 2px;
-	-webkit-border-radius: 2px 2px 2px 2px;
-	-o-border-radius: 	2px 2px 2px 2px;
 	box-sizing:			border-box;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: 	border-box;
   	-o-box-sizing: 		border-box;
   	width: 				100%;
   	border: 			1px solid rgba(204,204,204,1);
-  	color: 				#868686;
+	color: 				#868686;
+	margin-left: 		5px;
+	margin-right: 		5px;
+	padding-left: 		10px;
+	z-index: 			15;
 }
 .name input:hover, 
 .email input:hover, 
@@ -678,11 +665,7 @@ figure img {
   	-webkit-transition: all 0.3s;
   	-o-transition: 		all 0.3s;
   	margin-top:			-4px;
-  	font-weight:		700;
-  	border-radius: 		8px 8px 8px 8px;
-  	-moz-border-radius: 8px 8px 8px 8px;
-  	-webkit-border-radius: 8px 8px 8px 8px;
-  	-o-border-radius: 	8px 8px 8px 8px;	
+	font-weight:		700;
 }
 #submit-button:hover {
 	background-color: 	rgba(0,0,0,0);
@@ -703,6 +686,15 @@ figure img {
 .submit:hover .ease {
 	width:				100%;
   	background-color:	white;
+}
+.no-error {
+	display: 			none;
+}
+.error {
+	float: 				left;
+	visibility:  		visible;
+	color: 				#ff0000;
+	font-weight: 		bold;
 }
 /* ======                  ====== **
 ** 			MEDIA QUERIES         **

@@ -48,11 +48,11 @@
 					
 					<!-- ====== BARRE DE MENU ====== -->
 					<div class="navMenu">
-						<ul>  
-			    			<li class="tabActive"><a href="#accueil">Accueil</a></li>
-			    			<li><a href="#services">Services</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#contact">Contact</a></li>
+						<ul id="navMenu">  
+			    			<li id="M1" class="tabActive"><a href="#accueil">Accueil</a></li>
+			    			<li id="M2"><a href="#services">Services</a></li>
+							<li id="M3"><a href="#portfolio">Portfolio</a></li>
+							<li if="M4"><a href="#contact">Contact</a></li>
 		  				</ul>
 
 		  			</div><!-- END (navMenu) -->
@@ -452,7 +452,8 @@
 						<!--<div id="form-div">-->
 							<h3>Contact Info</h3>
 							<span class="plump">WebAgency SAS<br/></span><p>25 rue d'Hauteville - 75010 PARIS<br/>Tél: 01 02 03 04 05<br/></p>
-							<form class="formulaire" id="form1">
+							<span id="msg" class="no-error">Tous les champs sont obligatoires !</span>
+							<form class="formulaire" id="form1" onsubmit="return verifForm(this)">
 								<p class="name">
 									<input type="text" name="contactName" id="contactName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
 								</p>
@@ -468,7 +469,7 @@
 								<div class="submit">
 									<input type="submit" value="Send Message" title="Envoyer votre message" id="submit-button"/>
 									<div class="ease"></div>
-								</div>
+								</div>	
 							</form>
 						<!--</div><!-- END (form-div) -->
 					</div><!-- END (form-main) -->
