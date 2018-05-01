@@ -13,6 +13,33 @@ for(i=0; i<elMts.length; i++) {
         }
     });
 }
+/* ---  TRAITEMENT DU TIMER et AFFICHAGE SOUS LE SLIDER  --- */ 
+var dixiemes = 300;
+setInterval('chronometre()', 100);
+document.getElementById('slide-1').addEventListener('click', function(){
+    dixiemes = 300;
+    width = (dixiemes / 300)*100;
+    document.getElementById('t1').style.width = width + '%';
+    document.getElementById('t2').style.width = width + '%';
+});
+document.getElementById('slide-2').addEventListener('click', function(){
+    dixiemes = 300;
+    width = (dixiemes / 300)*100;
+    document.getElementById('t1').style.width = width + '%';
+    document.getElementById('t2').style.width = width + '%';
+});
+function chronometre() {
+    dixiemes  -= 10;
+    if(dixiemes <= 0) {
+        dixiemes = 300;
+        document.getElementById('slide-1').checked = true;
+        /*console.log('checked');*/
+    }
+    width = (dixiemes / 300)*100;
+    document.getElementById('t1').style.width = width + '%';
+    document.getElementById('t2').style.width = width + '%';
+}
+
 /* --- VERIFICATION DU FORMULAIRE DE CONTACT AVANT ENVOI --- */
 function verifForm(f){
    var nameOk = verifName(f.contactName);
