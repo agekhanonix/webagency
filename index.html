@@ -45,17 +45,19 @@
 					<div class="navLogo">
 						<a href="#accueil"><img src="images/logo.png" alt="Logo WebAgency" title="Le logo de la  WebAgency" /></a>
 					</div>
-					
+					<div class="toggle-menu-direction">
+						<button type="button" class="toggle-menu-dir" data-target="#navMenu"><i class="fa fa-bars"></i></button>
+					</div>
 					<!-- ====== BARRE DE MENU ====== -->
 					<div class="navMenu">
+						<div id="toggle-menu"><i class="fa fa-bars fa-lg toggle"></i></div>
 						<ul id="navMenu">  
-			    			<li id="M1" class="tabActive"><a href="#accueil">Accueil</a></li>
+			    			<li id="M1"><a href="#accueil">Accueil</a></li>
 			    			<li id="M2"><a href="#services">Services</a></li>
 							<li id="M3"><a href="#portfolio">Portfolio</a></li>
-							<li if="M4"><a href="#contact">Contact</a></li>
-		  				</ul>
-
-		  			</div><!-- END (navMenu) -->
+							<li id="M4"><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- END (navMenu) -->
 		  		</div><!-- END (navBar) -->
 		  	</nav>
 
@@ -479,7 +481,6 @@
 		  </div><!-- END (container) -->
 
 	  	<!-- ######             JAVASCRIPT             ###### -->
-	  	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 		<script src="js/main.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -1,3 +1,18 @@
+/* --- CHANGEMENT DU BORDERTOP SUR CLICK --- */
+document.getElementById('M1').style.borderTop='2px solid #22b0b3';  /* On initialise le 1er elmt du menu */
+var elMts = document.querySelectorAll('.navMenu li');
+for(i=0; i<elMts.length; i++) {
+    elMts[i].addEventListener('click', function(e){                 /* On dépose un listener sur chacun des items */
+        for(j=1; j<=elMts.length; j++) {
+            var el = 'M'+j;
+            if(el == this.id) {
+                document.getElementById(el).style.borderTop = '2px solid #22b0b3'; /* Quand un item est cliqué */
+            } else {
+                document.getElementById(el).style.borderTop = '';
+            }
+        }
+    });
+}
 /* --- VERIFICATION DU FORMULAIRE DE CONTACT AVANT ENVOI --- */
 function verifForm(f){
    var nameOk = verifName(f.contactName);
