@@ -471,7 +471,7 @@ hr {
 	display: 			flex;
 	justify-content: 	center;
 	flex-wrap: 			wrap;
-	width: 				85%;
+	width: 				100%;
 	margin: 			0 auto;
 }
 figure {
@@ -479,7 +479,7 @@ figure {
 	overflow: 			hidden;
 	height: 			175px;
 	width:  			260px;
-	margin: 			10px;
+	margin: 			1px;
 }
 figure:hover .legend {
 	opacity: 			1;

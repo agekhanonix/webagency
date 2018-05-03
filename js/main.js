@@ -1,41 +1,41 @@
-/* --- CHANGEMENT DU BORDERTOP SUR CLICK --- */
-document.getElementById('M1').style.borderTop='2px solid #22b0b3';  /* On initialise le 1er elmt du menu */
-var elMts = document.querySelectorAll('.navMenu li');
-for(i=0; i<elMts.length; i++) {
-    elMts[i].addEventListener('click', function(e){                 /* On dépose un listener sur chacun des items */
-        for(j=1; j<=elMts.length; j++) {
-            var el = 'M'+j;
-            if(el == this.id) {
-                document.getElementById(el).style.borderTop = '2px solid #22b0b3'; /* Quand un item est cliqué */
-            } else {
-                document.getElementById(el).style.borderTop = '';
-            }
+/* --- CHANGEMENT DU BORDERTOP DE LA BARRE DE MENU SUR CLICK --- */
+var elLis = document.querySelectorAll('.navMenu li');
+elLis[0].style.borderTop = '2px solid #22b0b3';                         /* On initialise le 1er elmt du menu */
+for(i=0; i<elLis.length; i++) {
+    elLis[i].addEventListener('click', function(e){
+        for(i=0; i<elLis.length; i++) {
+            elLis[i].style.borderTop = '';
         }
+        e.target.parentNode.style.borderTop = '2px solid #22b0b3';      /* On réinitialise l'élément cliqué */
     });
 }
+/* --- CHANGEMENT DU BACKGROUD DU MENU PORTFOLIO SUR CLICK --- */
+
+/* ---         SLIDESHOW POUS L'ECRAN D'ACCUEIL          --- */
+
 /* ---  TRAITEMENT DU TIMER et AFFICHAGE SOUS LE SLIDER  --- */ 
-var dixiemes = 300;
-setInterval('chronometre()', 100);
+var secondes = 30;
+setInterval('chronometre()', 1000);
 document.getElementById('slide-1').addEventListener('click', function(){
-    dixiemes = 300;
-    width = (dixiemes / 300)*100;
+    secondes = 30;
+    width = (secondes / 30)*100;
     document.getElementById('t1').style.width = width + '%';
     document.getElementById('t2').style.width = width + '%';
 });
 document.getElementById('slide-2').addEventListener('click', function(){
-    dixiemes = 300;
-    width = (dixiemes / 300)*100;
+    secondes = 30;
+    width = (secondes / 30)*100;
     document.getElementById('t1').style.width = width + '%';
     document.getElementById('t2').style.width = width + '%';
 });
 function chronometre() {
-    dixiemes  -= 10;
-    if(dixiemes <= 0) {
-        dixiemes = 300;
+    secondes  -= 1;
+    if(secondes <= 0) {
+        secondes = 30;
         document.getElementById('slide-1').checked = true;
         /*console.log('checked');*/
     }
-    width = (dixiemes / 300)*100;
+    width = (secondes / 30)*100;
     document.getElementById('t1').style.width = width + '%';
     document.getElementById('t2').style.width = width + '%';
 }
