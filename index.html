@@ -62,44 +62,32 @@
 
 		  	<!-- ######              ACCUEIL                   ###### -->
             <!-- ====== Slideshow ====== -->
-            <a href="" id="accueil" class="anchor"></a>
+            <a id="accueil" class="anchor"></a>
             <header class="accueil">
-                <div class="slideshow">
-                    <div class="slides">
-                        <input type="radio" id="slide-1" name="slide" checked="checked" />
-                        <div class="slide">
-                            <img src="images/slider/bg1.jpg" title="Petite fille aux mains colorées" />
-                            <div id="t1" class="timer"></div>
-                        </div>
-                        <input type="radio" id="slide-2" name="slide" />
-                        <div class="slide">
-                            <img src="images/slider/bg2.jpg" title="Petite garcon avec un porte-voix" />
-                            <div id="t2" class="timer"></div>
-                        </div>
-                        <label for="slide-2" class="slide-moving next slide-1" title="Suivant">
-                            <i class="fa fa-angle-right right"></i>
-                        </label>
-                        <label for="slide-1" class="slide-moving previous slide-2" title="Précédent">
-                            <i class="fa fa-angle-left left"></i>
-                        </label>
-                        <label for="slide-2" class="slide-moving previous slide-1" title="Précédent">
-                            <i class="fa fa-angle-left left"></i>
-                        </label>
-                        <label for="slide-1" class="slide-moving next slide-2" title="Suivant">
-                            <i class="fa fa-angle-right right"></i>
-                        </label>
-                    </div><!-- END (slides) -->
-                    <div id="slider-texte">
-                        <h2>webagency : <span>l'agence de tous vos projets !</span></h2>
-                        <p>Vous avez un projet web ? La web agency vous aide à le réaliser !</p>
-                        <p><a href="#services" class="bouton"><b>Plus d'infos</b></a></p>
-                    </div><!-- END (slide-text) -->
-                </div><!-- END (slideshow) -->
+                <div class="slider">
+					<div class="banner">
+						<h2>webagency : <span>l'agence de tous vos projets !</span></h2>
+						<p>Vous avez un projet web ? La web agency vous aide à le réaliser !</p>
+						<p><a href="#services" class="bouton"><b>Plus d'infos</b></a></p>
+					</div><!-- END (banner) -->
+					<div class="btnLeft">
+						<i class="fa fa-angle-left fa-lg left"></i>
+					</div><!-- END (btnLeft) -->
+					<div class="btnRight">
+						<i class="fa fa-angle-right fa-lg right"></i>
+					</div><!-- END (btnRight) -->
+					<div>
+						<div>
+							<img id='image-slider' src="images/slider/bg1.jpg" title="La petite fille aux mains colorées">
+							<div id="timer" class="timer"></div>
+						</div>
+					</div><!-- END -->
+				</div><!-- END (slider) -->
             </header>
 		  	<!--</div>-->
 
 			<!-- ######              SERVICES                  ###### -->
-			<a href="" id="services" class="anchor"></a>
+			<a id="services" class="anchor"></a>
 			<section class="services">
 				<h2>nos services</h2>
 				<hr><span class="blueText size40">&bull;</span><hr>
@@ -142,7 +130,7 @@
 			</section>
 
 			<!-- ######               PORTFOLIO                ###### -->
-			<a href="" id="portfolio" class="anchor"></a>
+			<a id="portfolio" class="anchor"></a>
 			<section class="portfolio">
 				<h2>nos projets</h2>
 				<hr><span class="blueText size40">&bull;</span><hr>
@@ -380,7 +368,7 @@
 			</section>
 
 			<!-- ######             NOUS CONTACTER             ###### -->
-			<a href="" id="contact" class="anchor">
+			<a id="contact" class="anchor">
 			<section class="contact">
 				<div class="maps">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2156022977674!2d2.3476356154983815!3d48.873166307620465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1481372235333" width="640" height="400" style="border:0"></iframe>	
@@ -389,19 +377,19 @@
 						<!--<div id="form-div">-->
 							<h3>Contact Info</h3>
 							<span class="plump">WebAgency SAS<br/></span><p>25 rue d'Hauteville - 75010 PARIS<br/>Tél: 01 02 03 04 05<br/></p>
-							<span id="msg" class="no-error">Tous les champs sont obligatoires !</span>
-							<form class="formulaire" id="form1" onsubmit="return verifForm(this)">
+							<span class="errMsg" id="errMsg"></span>
+							<form class="formulaire" id="form-contact">
 								<p class="name">
-									<input type="text" name="contactName" id="contactName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
+									<input type="text" name="lastName" id="lastName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
 								</p>
 								<p class="email">
-									<input type="text" name="contactEmail" id="contactEmail" placeholder="E-mail" title="Entrez votre adresse courriel" class="validate[required,custom[email]] contact-input"/>
+									<input type="text" name="Email" id="Email" placeholder="E-mail" title="Entrez votre adresse courriel" class="validate[required,custom[email]] contact-input"/>
 								</p>
 								<p class="subject">
-									<input type="text" name="contactSubject" id="contactSubject" placeholder="Subject" title="Saisissez l'objet de votre message" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
+									<input type="text" name="Subject" id="Subject" placeholder="Subject" title="Saisissez l'objet de votre message" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
 								</p>
 								<p class="text">
-									<textarea id="contactMessage" name="contactMessage" placeholder="Message" title="Corps du message" class="validate[required,length[6,300]] contact-input"></textarea>
+									<textarea id="Message" name="Message" placeholder="Message" title="Corps du message" class="validate[required,length[6,300]] contact-input"></textarea>
 								</p>
 								<div class="submit">
 									<input type="submit" value="Send Message" title="Envoyer votre message" id="submit-button"/>

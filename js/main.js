@@ -1,102 +1,144 @@
 /* --- CHANGEMENT DU BORDERTOP DE LA BARRE DE MENU SUR CLICK --- */
 var elLis = document.querySelectorAll('.navMenu li');
-elLis[0].style.borderTop = '2px solid #22b0b3';                         /* On initialise le 1er elmt du menu */
+elLis[0].style.borderTop = '2px solid #5cadd3';                         /* On initialise le 1er elmt du menu */
 for(i=0; i<elLis.length; i++) {
     elLis[i].addEventListener('click', function(e){
         for(i=0; i<elLis.length; i++) {
             elLis[i].style.borderTop = '';
         }
-        e.target.parentNode.style.borderTop = '2px solid #22b0b3';      /* On réinitialise l'élément cliqué */
+        e.target.parentNode.style.borderTop = '2px solid #5cadd3';      /* On réinitialise l'élément cliqué */
     });
-}
+};
 /* --- CHANGEMENT DU BACKGROUD DU MENU PORTFOLIO SUR CLICK --- */
-
-/* ---         SLIDESHOW POUS L'ECRAN D'ACCUEIL          --- */
-
-/* ---  TRAITEMENT DU TIMER et AFFICHAGE SOUS LE SLIDER  --- */ 
-var secondes = 30;
-setInterval('chronometre()', 1000);
-document.getElementById('slide-1').addEventListener('click', function(){
-    secondes = 30;
-    width = (secondes / 30)*100;
-    document.getElementById('t1').style.width = width + '%';
-    document.getElementById('t2').style.width = width + '%';
-});
-document.getElementById('slide-2').addEventListener('click', function(){
-    secondes = 30;
-    width = (secondes / 30)*100;
-    document.getElementById('t1').style.width = width + '%';
-    document.getElementById('t2').style.width = width + '%';
-});
-function chronometre() {
-    secondes  -= 1;
-    if(secondes <= 0) {
-        secondes = 30;
-        document.getElementById('slide-1').checked = true;
-        /*console.log('checked');*/
+var Images = [];
+var Titres = [];
+Images[0] = 'images/slider/bg1.jpg';
+Images[1] = 'images/slider/bg2.jpg';
+Titres[0] = 'La petite fille aux mains colorées';
+Titres[1] = 'Le petit garçon au mégaphone';
+var img = 0;
+var miliemes = 0;
+var elSliders = {
+    slider: document.querySelector('.slider'),
+    image: document.getElementById('image-slider'),
+    btn: {
+        left: document.querySelector('.btnLeft'),
+        right: document.querySelector('.btnRight')
     }
-    width = (secondes / 30)*100;
-    document.getElementById('t1').style.width = width + '%';
-    document.getElementById('t2').style.width = width + '%';
 }
+var initialize = function() {
+    elSliders.btn.left.onclick = function() {changeImage(-1);};
+    elSliders.btn.right.onclick = function() {changeImage(+1);};
+    window.setInterval('chronometer()', 1);
+    changeImage(img);
+}
+function changeImage(no) {
+    img = Math.abs(img + no) % 2;
+    miliemes = 0;
+    elSliders.image.src = Images[img];
+    elSliders.image.title = Titres[img];
+}
+function chronometer() {
+    miliemes  += 1;
+    if(miliemes >= 3000) {
+        miliemes = 0;
+        changeImage(+1);
+    }
+    width = (miliemes / 3000)*100;
+    document.getElementById('timer').style.width = width + '%';
+}
+
 
 /* --- VERIFICATION DU FORMULAIRE DE CONTACT AVANT ENVOI --- */
-function verifForm(f){
-   var nameOk = verifName(f.contactName);
-   var mailOk = verifMail(f.contactEmail);
-   var subOk = verifSubject(f.contactSubject);
-   var msgOk = verifMessage(f.contactMessage);
-   
-   if(nameOk && mailOk && subOk && msgOk) {
+/* Fonctions de desactivation des messages d'erreurs         */
+function deactivateErrMsg(){
+    var elErrMsg = document.getElementById('errMsg');
+    elErrMsg.style.display = 'none';
+};
+/* --- Fonctions de vérification du formulaire           --- */
+var check = {};
+check['lastName'] = function(id) {
+    var name = document.getElementById(id);
+    var elErrMsg = document.getElementById('errMsg');
+    if(name.value.length >= 2){
+        name.className = 'no-error',
+        elErrMsg.style.display = 'none';
         return true;
-   } else {
-        document.getElementById('msg').className = 'error';
-        return false;
-   }
-}
-function surligne(champ, erreur) {
-    if(erreur) {
-        champ.style.backgroundColor = "ffbbaa";
     } else {
-        champ.style.backgroundColor = "";
-    }
-}
-function verifName(champ) {
-    if(champ.value.length < 2) {
-        surligne(champ, true);
+        name.className = 'error',
+        elErrMsg.textContent = 'Un nom ne peut pas faire moins de 2 caractères';
+        elErrMsg.style.display = 'block';
         return false;
-    } else {
-        surligne(champ, false);
-        return true;
     }
-}
-function verifSubject(champ) {
-    if(champ.value.length < 2) {
-        surligne(champ, true);
-        return false;
-    } else {
-        surligne(champ, false);
-        return true;
-    }
-}
-function verifMail(champ) {
+};
+check['Email'] = function(id) {
+    var email = document.getElementById(id);
+    var elErrMsg = document.getElementById('errMsg');
     var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
-    if(!regex.test(champ.value)){
-       surligne(champ, true);
-       return false;
+    if(email.value.length >= 8 && regex.test(email.value)) {
+        email.className = 'no-error';
+        elErrMsg.style.display = 'none';
+        return true;
     } else {
-       surligne(champ, false);
-       return true;
+        email.className = 'error';
+        elErrMsg.textContent = "Ce doit etre une adresse courriel valide";
+        elErrMsg.style.display = 'block';
+        return false;
     }
-}
-function verifMessage(champ) {
-    if(champ.value.length < 2) {
-        if(champ.value.length < 2) {
-            surligne(champ, true);
-            return false;
-        } else {
-            surligne(champ, false);
-            return true;
+};
+check['Subject'] = function(id) {
+    var subject = document.getElementById(id);
+    var elErrMsg = document.getElementById('errMsg');
+    if(subject.value.length >= 2) {
+        subject.className = 'no-error';
+        elErrMsg.style.display = 'none';
+        return true;
+    } else {
+        subject.className = 'error';
+        elErrMsg.textContent = "L'objet du message doit faire au moins 2 caractères";
+        elErrMsg.style.display = 'block';
+        return false;
+    }
+};
+check['Message'] = function(id) {
+    var elErrMsg = document.getElementById('errMsg');
+    var message = document.getElementById(id);
+    if(message.value.length >= 10) {
+        message.classname = 'no-error';
+        elErrMsg.style.display = 'none';
+        return true;
+    } else {
+        message.className = 'error';
+        elErrMsg.textContent = "Le message doit être composé d'au moins 10 caractères";
+        elErrMsg.style.display = 'block';
+        return false;
+    }
+};
+// --- Mise en place des evènements                           --- */
+(function(){
+    var myForm = document.getElementById('form-contact');
+    var inputs = document.querySelectorAll('#form-contact input[type=text], #form-contact textarea');
+    for(var i=0; i<inputs.length; i++) {
+        inputs[i].addEventListener('keyup', function(e){
+            check[e.target.id](e.target.id);
+        });
+    }
+    myForm.addEventListener('submit', function(e){
+        var result = true;
+        for(var i in check) {
+            result = check[i](i) && result;
         }
-    }
-}
+        if(result) {
+            var elErrMsg = document.getElementById('errMsg');
+            elErrMsg.textContent = 'Le message a été envoyé';
+            elErrMsg.style.color = '#5cadd3';
+            elErrMsg.style.borderColor = '#00ff00';
+            elErrMsg.style.backgroundColor = '#bfffbf';
+            elErrMsg.style.display = 'block';
+        }
+        e.preventDefault();
+    });
+    initialize(); /* Initialisation du slider */
+})();
+
+deactivateErrMsg();
