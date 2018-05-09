@@ -1,15 +1,24 @@
 /* --- CHANGEMENT DU BORDERTOP DE LA BARRE DE MENU SUR CLICK --- */
-var elLis = document.querySelectorAll('.navMenu li');
-elLis[0].style.borderTop = '2px solid #5cadd3';                         /* On initialise le 1er elmt du menu */
-for(i=0; i<elLis.length; i++) {
-    elLis[i].addEventListener('click', function(e){
-        for(i=0; i<elLis.length; i++) {
-            elLis[i].style.borderTop = '';
+var elLisH = document.querySelectorAll('.navMenu-horiz li');
+elLisH[0].style.borderTop = '0.125rem solid #5cadd3';                         /* On initialise le 1er elmt du menu */
+for(i=0; i<elLisH.length; i++) {
+    elLisH[i].addEventListener('click', function(e){
+        for(i=0; i<elLisH.length; i++) {
+            elLisH[i].style.borderTop = '';
         }
-        e.target.parentNode.style.borderTop = '2px solid #5cadd3';      /* On réinitialise l'élément cliqué */
+        e.target.parentNode.style.borderTop = '0.125rem solid #5cadd3';      /* On réinitialise l'élément cliqué */
     });
 };
-/* --- CHANGEMENT DU BACKGROUD DU MENU PORTFOLIO SUR CLICK --- */
+var elBut = document.getElementById('toggle-button');
+var elMenu = document.getElementById('navMenu-vert');
+elBut.addEventListener('click',function(){
+    if(elMenu.style.display === 'none') {
+        elMenu.style.display = 'block';
+    } else {
+        elMenu.style.display = 'none';
+    }
+});
+/* --- CHANGEMENT DU BACKGROUND DU MENU PORTFOLIO SUR CLICK --- */
 var Images = [];
 var Titres = [];
 Images[0] = 'images/slider/bg1.jpg';

@@ -39,26 +39,30 @@
 	<body>
 		<div class="container">
 			<!-- ###### BARRE DE NAVIGATION (toujours visible) ###### -->
-			<nav>
-				<div class="navBar">
-					<!-- ======      LOGO     ====== -->
-					<div class="navLogo">
-						<a href="#accueil"><img src="images/logo.png" alt="Logo WebAgency" title="Le logo de la  WebAgency" /></a>
-					</div>
-					<div class="toggle-menu-direction">
-						<button type="button" class="toggle-menu-dir" data-target="#navMenu"><i class="fa fa-bars"></i></button>
-					</div>
-					<!-- ====== BARRE DE MENU ====== -->
-					<div class="navMenu">
-						<ul>  
-			    			<li><a href="#accueil">Accueil</a></li>
-			    			<li><a href="#services">Services</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</div><!-- END (navMenu) -->
-		  		</div><!-- END (navBar) -->
-		  	</nav>
+			<div class="navBar">
+				<!-- ======      LOGO     ====== -->
+				<div class="navLogo">
+					<a href="#accueil"><img src="images/logo.png" alt="Logo WebAgency" title="Le logo de la  WebAgency" /></a>
+				</div>
+				<button id="toggle-button" title="Affichage du menu"><i class="fa fa-bars"></i></button>
+				<!-- ====== BARRE DE MENU ====== -->
+				<div class="navMenu-horiz size10">
+					<ul>  
+						<li><a href="#accueil">Accueil</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!-- END (navMenu-horiz) -->
+				<div class="navMenu-vert size10" id="navMenu-vert">
+					<ul>
+						<li><a href="#accueil">Accueil</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div><!-- END (navBar) -->
 
 		  	<!-- ######              ACCUEIL                   ###### -->
             <!-- ====== Slideshow ====== -->
@@ -76,12 +80,10 @@
 					<div class="btnRight">
 						<i class="fa fa-angle-right fa-lg right"></i>
 					</div><!-- END (btnRight) -->
-					<div>
-						<div>
-							<img id='image-slider' src="images/slider/bg1.jpg" title="La petite fille aux mains colorées">
-							<div id="timer" class="timer"></div>
-						</div>
-					</div><!-- END -->
+					<div class="image-slider">
+						<img id='image-slider' src="images/slider/bg1.jpg" title="La petite fille aux mains colorées">
+						<div id="timer"></div>
+					</div>
 				</div><!-- END (slider) -->
             </header>
 		  	<!--</div>-->
@@ -91,7 +93,7 @@
 			<section class="services">
 				<h2>nos services</h2>
 				<hr><span class="blueText size40">&bull;</span><hr>
-				<p>Plus qu'une agence web, la WebAgency c'est aussi et surtout une équipe de créateurs et de concepteurs qui, alliant créativité et technologie avancée, réalisent depuis les années 2000 des sites webs. Le tout en plaçant l'utilisateur au centre de sa réflexion.</p>
+				<p class="size20">Plus qu'une agence web, la WebAgency c'est aussi et surtout une équipe de créateurs et de concepteurs qui, alliant créativité et technologie avancée, réalisent depuis les années 2000 des sites webs. Le tout en plaçant l'utilisateur au centre de sa réflexion.</p>
 				<div id="servicesContent">
 					<div class="featureImage"><img src="images/main-feature.png"></div>
 					<div class="features">
@@ -102,7 +104,7 @@
 							</div>
 							<div>
 								<span class="size20 plump">UX Design</span><br/>
-								<span class="size10">La WebAgengy toujours à la pointe de l'innovation afin que celui qui parcours votre site garde un souvenir inoubliable de sa visite</span>
+								<span class="size20">La WebAgengy toujours à la pointe de l'innovation afin que celui qui parcours votre site garde un souvenir inoubliable de sa visite</span>
 							</div>
 						</div><!-- END (feature) -->
 						<div class="feature">
@@ -112,7 +114,7 @@
 							</div>
 							<div>
 								<span class="size20 plump">UI Design</span><br/>
-								<span class="size10">La WebAgency s'engage sur une interface adaptative, quelquesoit le media et/ou le navigateur (ordinateur, tablette ou smartphone) utilisé par votre visiteur</span>
+								<span class="size20">La WebAgency s'engage sur une interface adaptative, quelquesoit le media et/ou le navigateur (ordinateur, tablette ou smartphone) utilisé par votre visiteur</span>
 							</div>
 						</div><!-- END (feature) -->
 						<div class="feature">
@@ -122,7 +124,7 @@
 							</div>
 							<div>
 								<span class="size20 plump">SEO</span><br/>
-								<span class="size10">L'expertise de la WebAgency vous assure une visibilité optimum sur le net.</span>
+								<span class="size20">L'expertise de la WebAgency vous assure une visibilité optimum sur le net.</span>
 							</div>
 						</div><!-- END (feature) -->
 					</div><!-- END (features) -->
@@ -134,30 +136,30 @@
 			<section class="portfolio">
 				<h2>nos projets</h2>
 				<hr><span class="blueText size40">&bull;</span><hr>
-				<p>Quelques exemples de notre savoir faire et de notre expertise.</p>
+				<p class="size20">Quelques exemples de notre savoir faire et de notre expertise.</p>
 				<nav>
 					<div class="port-container">
 						<!-- 1er onglet -->
 						<input name="tabs-group" type="radio" id="tab1" class="port-container" checked>
-						<label for="tab1" class="port-container"><i class="fa fa-book fa-fw fas"></i><span>All Works</span>
+						<label for="tab1" class="port-container"><i class="fa fa-book fa-fw fas"></i><span class="size10">All Works</span>
 							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
 						</label>
 						
 						<!-- 2e onglet -->
 						<input name="tabs-group" type="radio" id="tab2" class="port-container">
-						<label for="tab2" class="port-container"><i class="fa fa-puzzle-piece fa-fw fas"></i><span>Creative</span>
+						<label for="tab2" class="port-container"><i class="fa fa-puzzle-piece fa-fw fas"></i><span class="size10">Creative</span>
 							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
 						</label>
 
 						<!-- 3e onglet -->
 						<input name="tabs-group" type="radio" id="tab3" class="port-container">
-						<label for="tab3" class="port-container"><i class="fa fa-paint-brush fa-fw fas"></i><span>Corporate</span>
+						<label for="tab3" class="port-container"><i class="fa fa-paint-brush fa-fw fas"></i><span class="size10">Corporate</span>
 							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
 						</label>
 
 						<!-- 4e onglet -->
 						<input name="tabs-group" type="radio" id="tab4" class="port-container">
-						<label for="tab4" class="port-container"><i class="fa fa-address-card fa-fw fas"></i><span>Portfolio</span>
+						<label for="tab4" class="port-container"><i class="fa fa-address-card fa-fw fas"></i><span class="size10">Portfolio</span>
 							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
 						</label>
 
@@ -374,29 +376,26 @@
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2156022977674!2d2.3476356154983815!3d48.873166307620465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1481372235333" width="640" height="400" style="border:0"></iframe>	
 					<div class="blueScreen" title="Plan d'accès fourni par google"></div>
 					<div id="form-main">
-						<!--<div id="form-div">-->
-							<h3>Contact Info</h3>
-							<span class="plump">WebAgency SAS<br/></span><p>25 rue d'Hauteville - 75010 PARIS<br/>Tél: 01 02 03 04 05<br/></p>
-							<span class="errMsg" id="errMsg"></span>
-							<form class="formulaire" id="form-contact">
-								<p class="name">
-									<input type="text" name="lastName" id="lastName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
-								</p>
-								<p class="email">
-									<input type="text" name="Email" id="Email" placeholder="E-mail" title="Entrez votre adresse courriel" class="validate[required,custom[email]] contact-input"/>
-								</p>
-								<p class="subject">
-									<input type="text" name="Subject" id="Subject" placeholder="Subject" title="Saisissez l'objet de votre message" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
-								</p>
-								<p class="text">
-									<textarea id="Message" name="Message" placeholder="Message" title="Corps du message" class="validate[required,length[6,300]] contact-input"></textarea>
-								</p>
-								<div class="submit">
-									<input type="submit" value="Send Message" title="Envoyer votre message" id="submit-button"/>
-									<div class="ease"></div>
-								</div>	
-							</form>
-						<!--</div><!-- END (form-div) -->
+						<h3>Contact Info</h3>
+						<span class="plump"> WebAgency SAS<br/></span><p class="address">25 rue d'Hauteville - 75010 PARIS<br/>Tél: 01 02 03 04 05<br/></p>
+						<span class="errMsg" id="errMsg"></span>
+						<form class="formulaire" id="form-contact">
+							<p class="name">
+								<input type="text" name="lastName" id="lastName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
+							</p>
+							<p class="email">
+								<input type="text" name="Email" id="Email" placeholder="E-mail" title="Entrez votre adresse courriel" class="validate[required,custom[email]] contact-input"/>
+							</p>
+							<p class="subject">
+								<input type="text" name="Subject" id="Subject" placeholder="Subject" title="Saisissez l'objet de votre message" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
+							</p>
+							<p class="text">
+								<textarea id="Message" name="Message" placeholder="Message" title="Corps du message" class="validate[required,length[6,300]] contact-input"></textarea>
+							</p>
+							<div class="submit">
+								<input type="submit" value="Send Message" title="Envoyer votre message" id="submit-button"/>
+							</div>	
+						</form>
 					</div><!-- END (form-main) -->
 				</div><!-- END (maps) -->
 			</section>
