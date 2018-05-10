@@ -44,7 +44,16 @@
 				<div class="navLogo">
 					<a href="#accueil"><img src="images/logo.png" alt="Logo WebAgency" title="Le logo de la  WebAgency" /></a>
 				</div>
-				<button id="toggle-button" title="Affichage du menu"><i class="fa fa-bars"></i></button>
+				<div class="dropdown">
+					<button onclick="showMenu()" class="dropbtn" title="Affichage du menu"><i class="fa fa-bars"></i></button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#accueil">Accueil</a>
+						<a href="#services">Services</a>
+						<a href="#portfolio">Portfolio</a>
+						<a href="#contact">Contact</a>
+					</div>
+				</div>
+				
 				<!-- ====== BARRE DE MENU ====== -->
 				<div class="navMenu-horiz size10">
 					<ul>  
@@ -54,14 +63,6 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div><!-- END (navMenu-horiz) -->
-				<div class="navMenu-vert size10" id="navMenu-vert">
-					<ul>
-						<li><a href="#accueil">Accueil</a></li>
-						<li><a href="#services">Services</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</div>
 			</div><!-- END (navBar) -->
 
 		  	<!-- ######              ACCUEIL                   ###### -->
@@ -373,7 +374,7 @@
 			<a id="contact" class="anchor">
 			<section class="contact">
 				<div class="maps">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2156022977674!2d2.3476356154983815!3d48.873166307620465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1481372235333" width="640" height="400" style="border:0"></iframe>	
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2156022977674!2d2.3476356154983815!3d48.873166307620465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1481372235333" style="border:0"></iframe>	
 					<div class="blueScreen" title="Plan d'accès fourni par google"></div>
 					<div id="form-main">
 						<h3>Contact Info</h3>

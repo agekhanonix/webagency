@@ -9,15 +9,20 @@ for(i=0; i<elLisH.length; i++) {
         e.target.parentNode.style.borderTop = '0.125rem solid #5cadd3';      /* On réinitialise l'élément cliqué */
     });
 };
-var elBut = document.getElementById('toggle-button');
-var elMenu = document.getElementById('navMenu-vert');
-elBut.addEventListener('click',function(){
-    if(elMenu.style.display === 'none') {
-        elMenu.style.display = 'block';
-    } else {
-        elMenu.style.display = 'none';
+/* Quand l'utilisateur clique sur le bouton on affiche le menu vertical */
+function showMenu() {
+    document.getElementById('myDropdown').classList.toggle('show');
+}
+window.onclick = function(e) {
+    if(!e.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for(var i=0; i<dropdowns.length; i++) {
+            if(dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+            }
+        }
     }
-});
+}
 /* --- CHANGEMENT DU BACKGROUND DU MENU PORTFOLIO SUR CLICK --- */
 var Images = [];
 var Titres = [];
