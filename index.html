@@ -37,371 +37,368 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<!-- ###### BARRE DE NAVIGATION (toujours visible) ###### -->
+		<!-- *******                                              ****** -->
+		<!-- *                       ACCUEIL                           * -->
+		<!-- *******                                              ****** -->
+		<header id="accueil">
+			<!--          Barre de navigation (toujours visible)         -->
 			<div class="navBar">
-				<!-- ======      LOGO     ====== -->
+				<!-- ======              LOGO                     ====== -->
 				<div class="navLogo">
 					<a href="#accueil"><img src="images/logo.png" alt="Logo WebAgency" title="Le logo de la  WebAgency" /></a>
 				</div>
-				<div class="dropdown">
-					<button onclick="showMenu()" class="dropbtn" title="Affichage du menu"><i class="fa fa-bars"></i></button>
-					<div id="myDropdown" class="dropdown-content">
-						<a href="#accueil">Accueil</a>
-						<a href="#services">Services</a>
-						<a href="#portfolio">Portfolio</a>
-						<a href="#contact">Contact</a>
-					</div>
-				</div>
-				
-				<!-- ====== BARRE DE MENU ====== -->
-				<div class="navMenu-horiz size10">
-					<ul>  
+				<!-- ======           BARRE DE MENU               ====== -->
+				<nav class="navMenu size10">
+					<label for="show-menu" class="show-menu">
+						<div class="lines"><span class="fa fa-bars fa-lg"></span></div>
+					</label>
+					<input type="checkbox" id="show-menu">
+					<ul id="navMenu">  
 						<li><a href="#accueil">Accueil</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#portfolio">Portfolio</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
-				</div><!-- END (navMenu-horiz) -->
-			</div><!-- END (navBar) -->
+				</nav><!-- END (navMenu) -->
+			</div>
 
-		  	<!-- ######              ACCUEIL                   ###### -->
-            <!-- ====== Slideshow ====== -->
-            <a id="accueil" class="anchor"></a>
-            <header class="accueil">
-                <div class="slider">
-					<div class="banner">
-						<h2>webagency : <span>l'agence de tous vos projets !</span></h2>
-						<p>Vous avez un projet web ? La web agency vous aide à le réaliser !</p>
-						<p><a href="#services" class="bouton"><b>Plus d'infos</b></a></p>
-					</div><!-- END (banner) -->
-					<div class="btnLeft">
-						<i class="fa fa-angle-left fa-lg left"></i>
-					</div><!-- END (btnLeft) -->
-					<div class="btnRight">
-						<i class="fa fa-angle-right fa-lg right"></i>
-					</div><!-- END (btnRight) -->
-					<div class="image-slider">
-						<img id='image-slider' src="images/slider/bg1.jpg" title="La petite fille aux mains colorées">
-						<div id="timer"></div>
-					</div>
-				</div><!-- END (slider) -->
-            </header>
-		  	<!--</div>-->
+			<!--                  SlideShow                              -->
+			<section class="slider">
+				<div class="banner">
+					<h2>webagency : <span>l'agence de tous vos projets !</span></h2>
+					<p>Vous avez un projet web ? La web agency vous aide à le réaliser !</p>
+					<p><a href="#services" class="bouton"><b>Plus d'infos</b></a></p>
+				</div><!-- END (banner) -->
+				<div class="btnLeft">
+					<i class="fa fa-angle-left fa-lg left"></i>
+				</div><!-- END (btnLeft) -->
+				<div class="btnRight">
+					<i class="fa fa-angle-right fa-lg right"></i>
+				</div><!-- END (btnRight) -->
+				<div class="image-slider">
+					<img id='image-slider' src="images/slider/bg1.jpg" title="La petite fille aux mains colorées">
+					<div id="timer"></div>
+				</div>
+			</section><!-- END (slider) -->
+		</header>
 
-			<!-- ######              SERVICES                  ###### -->
-			<a id="services" class="anchor"></a>
-			<section class="services">
-				<h2>nos services</h2>
-				<hr><span class="blueText size40">&bull;</span><hr>
-				<p class="size20">Plus qu'une agence web, la WebAgency c'est aussi et surtout une équipe de créateurs et de concepteurs qui, alliant créativité et technologie avancée, réalisent depuis les années 2000 des sites webs. Le tout en plaçant l'utilisateur au centre de sa réflexion.</p>
-				<div id="servicesContent">
-					<div class="featureImage"><img src="images/main-feature.png"></div>
-					<div class="features">
-						<div class="feature">
-							<div class="bug">
-								<span class="blueText"><i class="fa fa-line-chart fa-lg circle" title="Interface utilisateur (UX)"></i></span>
-								<span class="blueText size40 bluePoint">&bull;</span>
-							</div>
-							<div>
-								<span class="size20 plump">UX Design</span><br/>
-								<span class="size20">La WebAgengy toujours à la pointe de l'innovation afin que celui qui parcours votre site garde un souvenir inoubliable de sa visite</span>
-							</div>
-						</div><!-- END (feature) -->
-						<div class="feature">
-							<div class="bug">
-								<span class="blueText"><i class="fa fa-cubes fa-lg circle" title="Interface graphique (UI)"></i></span>
-								<span class="blueText size40 bluePoint">&bull;</span>
-							</div>
-							<div>
-								<span class="size20 plump">UI Design</span><br/>
-								<span class="size20">La WebAgency s'engage sur une interface adaptative, quelquesoit le media et/ou le navigateur (ordinateur, tablette ou smartphone) utilisé par votre visiteur</span>
-							</div>
-						</div><!-- END (feature) -->
-						<div class="feature">
-							<div class="bug">
-								<span class="blueText"><i class="fa fa-pie-chart fa-lg circle" title="Référencement (SEO)"></i></span>
-								<span class="blueText size40 bluePoint">&bull;</span>
-							</div>
-							<div>
-								<span class="size20 plump">SEO</span><br/>
-								<span class="size20">L'expertise de la WebAgency vous assure une visibilité optimum sur le net.</span>
-							</div>
-						</div><!-- END (feature) -->
-					</div><!-- END (features) -->
-				</div><!-- END (servicesContent) -->
-			</section>
+		<!-- *******                                              ****** -->
+		<!-- *                      SERVICES                           * -->
+		<!-- *******                                              ****** -->
+		<section id="services">
+			<h2>nos services</h2>
+			<hr><span class="blueText size40">&bull;</span><hr>
+			<p class="size20">Plus qu'une agence web, la WebAgency c'est aussi et surtout une équipe de créateurs et de concepteurs qui, alliant créativité et technologie avancée, réalisent depuis les années 2000 des sites webs. Le tout en plaçant l'utilisateur au centre de sa réflexion.</p>
+			<div id="servicesContent">
+				<section class="featureImage"><img src="images/main-feature.png"></section>
+				<section class="features">
+					<article class="feature">
+						<div class="bug">
+							<span class="blueText"><i class="fa fa-line-chart fa-lg circle" title="Interface utilisateur (UX)"></i></span>
+							<span class="blueText size40 bluePoint">&bull;</span>
+						</div>
+						<div>
+							<span class="size20 plump">UX Design</span><br/>
+							<span class="size20">La WebAgengy toujours à la pointe de l'innovation afin que celui qui parcours votre site garde un souvenir inoubliable de sa visite</span>
+						</div>
+					</article><!-- END (feature) -->
+					<article class="feature">
+						<div class="bug">
+							<span class="blueText"><i class="fa fa-cubes fa-lg circle" title="Interface graphique (UI)"></i></span>
+							<span class="blueText size40 bluePoint">&bull;</span>
+						</div>
+						<div>
+							<span class="size20 plump">UI Design</span><br/>
+							<span class="size20">La WebAgency s'engage sur une interface adaptative, quelquesoit le media et/ou le navigateur (ordinateur, tablette ou smartphone) utilisé par votre visiteur</span>
+						</div>
+					</article><!-- END (feature) -->
+					<article class="feature">
+						<div class="bug">
+							<span class="blueText"><i class="fa fa-pie-chart fa-lg circle" title="Référencement (SEO)"></i></span>
+							<span class="blueText size40 bluePoint">&bull;</span>
+						</div>
+						<div>
+							<span class="size20 plump">SEO</span><br/>
+							<span class="size20">L'expertise de la WebAgency vous assure une visibilité optimum sur le net.</span>
+						</div>
+					</article><!-- END (feature) -->
+				</div><!-- END (features) -->
+			</div><!-- END (servicesContent) -->
+		</section>
 
-			<!-- ######               PORTFOLIO                ###### -->
-			<a id="portfolio" class="anchor"></a>
-			<section class="portfolio">
-				<h2>nos projets</h2>
-				<hr><span class="blueText size40">&bull;</span><hr>
-				<p class="size20">Quelques exemples de notre savoir faire et de notre expertise.</p>
-				<nav>
-					<div class="port-container">
-						<!-- 1er onglet -->
-						<input name="tabs-group" type="radio" id="tab1" class="port-container" checked>
-						<label for="tab1" class="port-container"><i class="fa fa-book fa-fw fas"></i><span class="size10">All Works</span>
-							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
-						</label>
-						
-						<!-- 2e onglet -->
-						<input name="tabs-group" type="radio" id="tab2" class="port-container">
-						<label for="tab2" class="port-container"><i class="fa fa-puzzle-piece fa-fw fas"></i><span class="size10">Creative</span>
-							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
-						</label>
+		<!-- *******                                              ****** -->
+		<!-- *                      PORTFOLIO                          * -->
+		<!-- *******                                              ****** -->
+		<section id="portfolio">
+			<h2>nos projets</h2>
+			<hr><span class="blueText size40">&bull;</span><hr>
+			<p class="size20">Quelques exemples de notre savoir faire et de notre expertise.</p>
+			<nav>
+				<div class="port-container">
+					<!-- 1er onglet -->
+					<input name="tabs-group" type="radio" id="tab1" class="port-container" checked>
+					<label for="tab1" class="port-container"><i class="fa fa-book fa-fw fas"></i><span class="size10">All Works</span>
+						<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
+					</label>
+					
+					<!-- 2e onglet -->
+					<input name="tabs-group" type="radio" id="tab2" class="port-container">
+					<label for="tab2" class="port-container"><i class="fa fa-puzzle-piece fa-fw fas"></i><span class="size10">Creative</span>
+						<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
+					</label>
 
-						<!-- 3e onglet -->
-						<input name="tabs-group" type="radio" id="tab3" class="port-container">
-						<label for="tab3" class="port-container"><i class="fa fa-paint-brush fa-fw fas"></i><span class="size10">Corporate</span>
-							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
-						</label>
+					<!-- 3e onglet -->
+					<input name="tabs-group" type="radio" id="tab3" class="port-container">
+					<label for="tab3" class="port-container"><i class="fa fa-paint-brush fa-fw fas"></i><span class="size10">Corporate</span>
+						<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
+					</label>
 
-						<!-- 4e onglet -->
-						<input name="tabs-group" type="radio" id="tab4" class="port-container">
-						<label for="tab4" class="port-container"><i class="fa fa-address-card fa-fw fas"></i><span class="size10">Portfolio</span>
-							<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
-						</label>
+					<!-- 4e onglet -->
+					<input name="tabs-group" type="radio" id="tab4" class="port-container">
+					<label for="tab4" class="port-container"><i class="fa fa-address-card fa-fw fas"></i><span class="size10">Portfolio</span>
+						<div><span class="triangle"><i class="fa fa-sort-desc fa-lg"></i></span></div>
+					</label>
 
-						<!-- 1er contenu -->
-						<section id="content1" class="port-content">
-							<div class="gallery">
-								<figure>
-									<img src="images/portfolio/01.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Optica 2018</b><br/>Opticien en ligne</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/02.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Robot Rabbit</b><br/>La mode en ligne</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/03.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Orginal Pompadour</b><br/>Chocolatier</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/04.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Lib tech</b><br/>Editions scientifiques</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/05.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Shopping Bag</b><br/>Illustration</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/06.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Imhotep</b><br/>Architecture</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/07.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Rocket Style</b><br/>Création de logos</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/08.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>3DCreation</b><br/>Modelisation 3D</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/full.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>French Burger</b><br/>Restauration rapide</p>
-										</div>
-									</figcaption>
-								</figure>
-							</div>
-						</section>
+					<!-- 1er onglet -->
+					<section id="content1" class="port-content">
+						<article class="gallery">
+							<figure>
+								<img src="images/portfolio/01.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Optica 2018</b><br/>Opticien en ligne</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/02.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Robot Rabbit</b><br/>La mode en ligne</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/03.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Orginal Pompadour</b><br/>Chocolatier</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/04.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Lib tech</b><br/>Editions scientifiques</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/05.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Shopping Bag</b><br/>Illustration</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/06.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Imhotep</b><br/>Architecture</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/07.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Rocket Style</b><br/>Création de logos</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/08.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>3DCreation</b><br/>Modelisation 3D</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/full.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>French Burger</b><br/>Restauration rapide</p>
+									</div>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
 
-						<!-- 2eme contenu -->
-						<section id="content2" class="port-content">
-							<div class="gallery">
-								<figure>
-									<img src="images/portfolio/01.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Optica 2018</b><br/>Opticien en ligne</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/02.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Robot Rabbit</b><br/>La mode en ligne</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/06.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Imhotep</b><br/>Architecture</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/07.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Rocket Style</b><br/>Création de logos</p>
-										</div>
-									</figcaption>
-								</figure>
-							</div>
-						</section>
+					<!-- 2eme onglet -->
+					<section id="content2" class="port-content">
+						<article class="gallery">
+							<figure>
+								<img src="images/portfolio/01.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Optica 2018</b><br/>Opticien en ligne</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/02.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Robot Rabbit</b><br/>La mode en ligne</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/06.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Imhotep</b><br/>Architecture</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/07.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Rocket Style</b><br/>Création de logos</p>
+									</div>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
 
-						<!-- 3eme contenu -->
-						<section id="content3" class="port-content">
-							<div class="gallery">
-								<figure>
-									<img src="images/portfolio/03.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Orginal Pompadour</b><br/>Chocolatier</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/05.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Shopping Bag</b><br/>Illustration</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/07.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Rocket Style</b><br/>Création de logos</p>
-										</div>
-									</figcaption>
-								</figure>
-							</div>
-						</section>
+					<!-- 3eme onglet -->
+					<section id="content3" class="port-content">
+						<article class="gallery">
+							<figure>
+								<img src="images/portfolio/03.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Orginal Pompadour</b><br/>Chocolatier</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/05.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Shopping Bag</b><br/>Illustration</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/07.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Rocket Style</b><br/>Création de logos</p>
+									</div>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
 
-						<section id="content4" class="port-content">
-							<div class="gallery">
-								<figure>
-									<img src="images/portfolio/04.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Lib tech</b><br/>Editions scientifiques</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/05.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>Shopping Bag</b><br/>Illustration</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/08.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>3DCreation</b><br/>Modelisation 3D</p>
-										</div>
-									</figcaption>
-								</figure>
-								<figure>
-									<img src="images/portfolio/full.jpg">
-									<figcaption>
-										<div class="legend">
-											<i class="fa fa-eye eye"></i>
-											<p><b>French Burger</b><br/>Restauration rapide</p>
-										</div>
-									</figcaption>
-								</figure>
-							</div>
-						</section>
-					</div><!-- END (port-container) -->
-				</nav>
-			</section>
+					<!-- 4eme onglet -->
+					<section id="content4" class="port-content">
+						<article class="gallery">
+							<figure>
+								<img src="images/portfolio/04.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Lib tech</b><br/>Editions scientifiques</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/05.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>Shopping Bag</b><br/>Illustration</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/08.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>3DCreation</b><br/>Modelisation 3D</p>
+									</div>
+								</figcaption>
+							</figure>
+							<figure>
+								<img src="images/portfolio/full.jpg">
+								<figcaption>
+									<div class="legend">
+										<i class="fa fa-eye eye"></i>
+										<p><b>French Burger</b><br/>Restauration rapide</p>
+									</div>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
+				</div><!-- END (port-container) -->
+			</nav>
+		</section>
 
-			<!-- ######             NOUS CONTACTER             ###### -->
-			<a id="contact" class="anchor">
-			<section class="contact">
-				<div class="maps">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2156022977674!2d2.3476356154983815!3d48.873166307620465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1481372235333" style="border:0"></iframe>	
-					<div class="blueScreen" title="Plan d'accès fourni par google"></div>
-					<div id="form-main">
-						<h3>Contact Info</h3>
-						<span class="plump"> WebAgency SAS<br/></span><p class="address">25 rue d'Hauteville - 75010 PARIS<br/>Tél: 01 02 03 04 05<br/></p>
-						<span class="errMsg" id="errMsg"></span>
-						<form class="formulaire" id="form-contact">
-							<p class="name">
-								<input type="text" name="lastName" id="lastName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
-							</p>
-							<p class="email">
-								<input type="text" name="Email" id="Email" placeholder="E-mail" title="Entrez votre adresse courriel" class="validate[required,custom[email]] contact-input"/>
-							</p>
-							<p class="subject">
-								<input type="text" name="Subject" id="Subject" placeholder="Subject" title="Saisissez l'objet de votre message" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
-							</p>
-							<p class="text">
-								<textarea id="Message" name="Message" placeholder="Message" title="Corps du message" class="validate[required,length[6,300]] contact-input"></textarea>
-							</p>
-							<div class="submit">
-								<input type="submit" value="Send Message" title="Envoyer votre message" id="submit-button"/>
-							</div>	
-						</form>
-					</div><!-- END (form-main) -->
-				</div><!-- END (maps) -->
-			</section>
-
-		  </div><!-- END (container) -->
+		<!-- *******                                              ****** -->
+		<!-- *                       CONTACT                           * -->
+		<!-- *******                                              ****** -->
+		<footer id="contact">
+			<div class="maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2156022977674!2d2.3476356154983815!3d48.873166307620465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1481372235333" 
+					width="600" height="450" style="border:0" allowfullscreen>
+				</iframe>	
+				<div class="blueScreen" title="Plan d'accès fourni par google"></div>
+				<div id="form-main">
+					<h3>Contact Info</h3>
+					<span class="plump"> WebAgency SAS<br/></span><p class="address">25 rue d'Hauteville - 75010 PARIS<br/>Tél: 01 02 03 04 05<br/></p>
+					<span class="errMsg" id="errMsg"></span>
+					<form class="formulaire" id="form-contact">
+						<p class="name">
+							<input type="text" name="lastName" id="lastName" placeholder="Name" title="Entrez votre nom" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
+						</p>
+						<p class="email">
+							<input type="text" name="Email" id="Email" placeholder="E-mail" title="Entrez votre adresse courriel" class="validate[required,custom[email]] contact-input"/>
+						</p>
+						<p class="subject">
+							<input type="text" name="Subject" id="Subject" placeholder="Subject" title="Saisissez l'objet de votre message" class="validate[required,custom[onlyLetter],length[0,100] contact-input"/>
+						</p>
+						<p class="text">
+							<textarea id="Message" name="Message" placeholder="Message" title="Corps du message" class="validate[required,length[6,300]] contact-input"></textarea>
+						</p>
+						<div class="submit">
+							<input type="submit" value="Send Message" title="Envoyer votre message" id="submit-button"/>
+						</div>	
+					</form>
+				</div><!-- END (form-main) -->
+			</div><!-- END (maps) -->
+		</footer>
 
 	  	<!-- ######             JAVASCRIPT             ###### -->
 		<script src="js/main.js" type="text/javascript"></script>

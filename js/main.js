@@ -1,28 +1,14 @@
 /* --- CHANGEMENT DU BORDERTOP DE LA BARRE DE MENU SUR CLICK --- */
-var elLisH = document.querySelectorAll('.navMenu-horiz li');
+var elLisH = document.querySelectorAll('.navMenu li a');
 elLisH[0].style.borderTop = '0.125rem solid #5cadd3';                         /* On initialise le 1er elmt du menu */
 for(i=0; i<elLisH.length; i++) {
     elLisH[i].addEventListener('click', function(e){
         for(i=0; i<elLisH.length; i++) {
             elLisH[i].style.borderTop = '';
         }
-        e.target.parentNode.style.borderTop = '0.125rem solid #5cadd3';      /* On réinitialise l'élément cliqué */
+        e.target.style.borderTop = '0.125rem solid #5cadd3';      /* On réinitialise l'élément cliqué */
     });
 };
-/* Quand l'utilisateur clique sur le bouton on affiche le menu vertical */
-function showMenu() {
-    document.getElementById('myDropdown').classList.toggle('show');
-}
-window.onclick = function(e) {
-    if(!e.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for(var i=0; i<dropdowns.length; i++) {
-            if(dropdowns[i].classList.contains('show')) {
-                dropdowns[i].classList.remove('show');
-            }
-        }
-    }
-}
 /* --- CHANGEMENT DU BACKGROUND DU MENU PORTFOLIO SUR CLICK --- */
 var Images = [];
 var Titres = [];
